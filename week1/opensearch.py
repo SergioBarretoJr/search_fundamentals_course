@@ -17,11 +17,3 @@ def get_opensearch():
         )
 
     return g.opensearch
-
-def create_index(index_name, index_body):
-    client = get_opensearch()
-    
-    if client.indices.exists(index_name):
-        client.indices.delete(index_name)
-    
-    return client.indices.create(index_name, index_body)
