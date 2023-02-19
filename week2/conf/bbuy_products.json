@@ -37,7 +37,7 @@
           "type": "shingle",
           "min_shingle_size": 2,
           "max_shingle_size": 3,
-          "output_unigrams": true
+          "output_unigrams": false
           }
       }
     }
@@ -259,6 +259,10 @@
           "hyphens": {
             "type": "text",
             "analyzer": "smarter_hyphens"
+          },
+          "trigrams": {
+            "type": "text",
+            "analyzer": "trigram"
           }
         }
       },
